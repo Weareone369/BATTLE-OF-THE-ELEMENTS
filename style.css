@@ -1,0 +1,103 @@
+/* Basic styling for the game */ 
+body { font-family: Arial, sans-serif; text-align: 
+    center; margin: 0; padding: 
+    0; background-color: #f4f4f4; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+} 
+/* The main container of the game */ 
+.container { 
+    width: 90%; /* Make the container responsive */
+     max-width: 400px; /* Limit the width on large screens */ 
+     background-color: white; 
+     padding: 20px; 
+     border-radius: 10px; 
+     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+     text-align: center; } /* Heading for the game */
+    
+     h1 { font-size: 24px; 
+        margin-bottom: 20px; 
+    } 
+    /* Style the scoreboard (for wins, losses) */ 
+    #scoreboard { 
+        display: flex; 
+        justify-content: space-between; 
+        margin-bottom: 20px; 
+    }
+    /* Result message styling */ 
+    #result-message { 
+        font-size: 18px; 
+        margin-bottom: 20px; 
+        font-weight: bold; 
+    } 
+    /* Style for the buttons (choices) */ 
+    .choices { 
+        display: flex; 
+        justify-content: space-between; 
+        flex-wrap: wrap; 
+        /* Allow buttons to wrap on small screens */ 
+    } /* Individual choice buttons */ 
+    
+    .choice { 
+        background-color: #4CAF50; 
+        color: white; 
+        border: none; 
+        padding: 10px; 
+        font-size: 16px; 
+        border-radius: 5px; 
+        cursor: pointer; 
+        flex-grow: 1; 
+        margin: 5px; 
+        width: 100%; 
+        /* Full width on mobile */ 
+    } /* Hover effect for choice buttons */ 
+    
+    .choice:hover { background-color: #45a049; } 
+    
+    /* Rounds left indicator */ 
+    #rounds-left { 
+        font-size: 16px; 
+        margin: 20px 0; 
+    } 
+    /* Restart button styling */ 
+    #restart { 
+        background-color: #f44336; 
+        color: white; 
+        border: none; 
+        padding: 10px; 
+        font-size: 16px; 
+        border-radius: 5px; 
+        cursor: pointer; 
+        width: 100%;
+         /* Full width for mobile */ 
+        } 
+        #restart:hover { 
+            background-color: #e53935; 
+        } 
+        /* Media query for smaller screens (like phones) */ 
+        @media (max-width: 600px) { 
+            h1 { font-size: 20px; } 
+            
+            .choice { 
+                font-size: 14px; 
+                padding: 8px; 
+            } 
+            
+            #result-message { 
+                font-size: 16px; 
+            } 
+        } /* Media query for tablets */ 
+        @media (min-width: 600px) and (max-width: 1024px) { 
+            h1 { 
+                font-size: 22px; 
+            } 
+            .choice { 
+                font-size: 15px; 
+                padding: 9px; 
+            } 
+            #result-message { 
+                font-size: 17px;
+        } 
+    }
